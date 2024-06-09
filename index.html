@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Travel: Through the parallel Universe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <div class="separator"></div>
+    <nav>
+      <ul>
+        <li class="active">00 HOME</li>
+        <li>01 DESTINATION</li>
+        <li>02 CREW</li>
+        <li>03 TECHNOLOGY</li>
+      </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      ☰
+    </div>
+  </header>
+  <main>
+    <section class="main-section">
+      <div class="content">
+        <h1>SO, YOU WANT TO TRAVEL TO</h1>
+        <h2>SPACE</h2>
+        <p>
+          Let's face it: if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
+        </p>
+      </div>
+      <div class="explore-button">
+        <i><i></i></i>
+        <span>EXPLORE</span>
+      </div>
+    </section>
+  </main>
+  <a href="https://wa.me/message/JGABLTYZCNVSD1" class="chat-button">
+    <span>Chat with us</span>
+    <div class="chat-icon">
+      💬
+    </div>
+  </a>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav ul');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-image: url('images/i4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    /* Placeholder for logo */
+    border-radius: 50%;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px 0px 10px 0px;
+  }
+
+  nav li {
+    cursor: pointer;
+  }
+
+  nav li.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100px;
+    background-color: white;
+    border-radius: 1px;
+  }
+  .separator {
+    width: 40vw;
+    height: 1px;
+    background-color: white;
+    margin: 3px;
+  }
+  .menu-icon {
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+  }
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .content h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 18px;
+    max-width: 400px;
+  }
+
+  .explore-button {
+    background-color: white;
+    color: black;
+    position: relative;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .explore-button i,
+  .explore-button i:nth-child(2) {
+    background: linear-gradient(45deg, #f8782d, #f8782d, #07a0ed, #27feecb1);
+  }
+  .explore-button i:nth-child(2) {
+    filter: blur(10px);
+  }
+
+  .explore-button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgb(255,255,255);
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .explore-button span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgba(255,255,255,0.028);
+    transform: skew(25deg);
+  }
+  .explore-button i {
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .explore-button i::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 120px;
+    background: linear-gradient(transparent, #f8782d, #45f3ff, #45f3ff, transparent);
+    animation: animate 4s linear infinite;
+    animation-play-state: running;
+  }
+  @keyframes animate {
+    0% {
+      transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%,-50%) rotate(360deg);
+    }
+  }
+
+  .explore-button i::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-radius: 500px;
+    inset: 3px;
+    width: 95%;
+    height: 80%;
+  }
+  .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  .chat-icon {
+    background: white;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    header {
+      padding: 20px;
+    }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .content h1 {
+      font-size: 18px;
+    }
+
+    .content h2 {
+      font-size: 60px;
+    }
+
+    .content p {
+      font-size: 16px;
+    }
+
+    .explore-button {
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      width: 100px;
+      height: 100px;
+      font-size: 16px;
+    }
+    main {
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 40px;
+      padding-left: 20px;
+    }
+    .main-section {
+      flex: 1;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .separator {
+      width: 65vw;
+    }
+    .content h2 {
+      font-size: 40px;
+    }
+
+    .content p {
+      font-size: 14px;
+    }
+
+    .explore-button {
+      top: 50%;
+      width: 160px;
+      height: 160px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 360px) {
+    .explore-button {
+      top: 60%;
+      bottom: 90px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>
